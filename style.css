@@ -1,0 +1,9 @@
+.bg-body-tertiary{
+    background-color: rgb(243, 10, 243) !important;
+}
+.nav-link{
+    color: rgb(2, 16, 29);
+}
+.nav-link:hover{
+    color: rgb(129, 124, 127);
+}
