@@ -1,9 +1,49 @@
-.bg-body-tertiary{
+.bg-body-tertiary {
     background-color: rgb(243, 10, 243) !important;
 }
-.nav-link{
+
+.nav-link {
     color: rgb(2, 16, 29);
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: rgb(129, 124, 127);
+}
+
+/* --- Container das Fotos --- */
+.container-fotos {
+    display: flex;
+    flex-wrap: wrap;         /* Pula de linha se não couber na tela (importante para celular) */
+    gap: 30px;               /* Espaço confortável entre as fotos grandes */
+    justify-content: center; /* Centraliza as fotos na página */
+    padding: 40px 20px;      /* Espaço em cima/baixo e nas laterais */
+}
+
+/* --- Links que envolvem as fotos --- */
+.container-fotos a {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 15px;     /* Arredondamento um pouco maior para fotos grandes */
+    overflow: hidden;        /* Garante que o zoom não escape das bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+    transition: box-shadow 0.3s ease;
+}
+
+.container-fotos a:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Sombra aumenta no hover */
+}
+
+/* --- Configuração das Fotos (Tamanho Maior Sugerido) --- */
+.foto-pqn {
+    width: 350px;            /* Largura maior */
+    height: 350px;           /* Altura igual para manter o quadrado perfeito */
+    object-fit: cover;       /* Centraliza e corta a imagem sem distorcer */
+    display: block;
+    transition: transform 0.3s ease; /* Transição suave do zoom */
+}
+
+/* --- Efeito de Zoom --- */
+.foto-pqn:hover {
+    transform: scale(1.08);  /* Aumenta 8% quando passa o mouse */
+    cursor: pointer;
 }
